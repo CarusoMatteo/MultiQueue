@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.Set;
 
 /* Q is the type of the unique identifier of queues 
- * that contains elements of type T. 
+ * that contains elements of type T.
  */
 public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
 	private final Map<Q, Queue<T>> queues = new HashMap<>();
