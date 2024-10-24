@@ -16,27 +16,29 @@ public interface MultiQueue<T, Q> {
 	Set<Q> availableQueues();
 
 	/**
-	 * @param creates a new queue
+	 * Creates a new queue
+	 * 
+	 * @param queue The queue to create.
 	 * @throws IllegalArgumentException if queue is already available
 	 */
 	void openNewQueue(Q queue);
 
 	/**
-	 * @param queue, is the queue we check
+	 * @param queue is the queue to check
 	 * @return whether queue is empty
 	 * @throws IllegalArgumentException if queue is not available
 	 */
 	boolean isQueueEmpty(Q queue);
 
 	/**
-	 * @param elem,  is the element to add
-	 * @param queue, is the queue where the element is to be added
+	 * @param elem  is the element to add
+	 * @param queue is the queue where the element is to be added
 	 * @throws IllegalArgumentException if queue is not available
 	 */
 	void enqueue(T elem, Q queue);
 
 	/**
-	 * @param queue, is the queue where to take the next element
+	 * @param queue is the queue where to take the next element
 	 * @return the next element in queue, or null if there's none
 	 * @throws IllegalArgumentException if queue is not available
 	 */
@@ -57,7 +59,7 @@ public interface MultiQueue<T, Q> {
 	/**
 	 * Empties a queue
 	 * 
-	 * @param queue, the queue to be emptied
+	 * @param queue the queue to be emptied
 	 * @return the list of elements enqueued
 	 * @throws IllegalArgumentException if queue is not available
 	 */
@@ -66,7 +68,7 @@ public interface MultiQueue<T, Q> {
 	/**
 	 * Empties a queue and move all of its elements in some other available queue
 	 * 
-	 * @param , the queue to be emptied
+	 * @param queue the queue to be emptied
 	 * @throws IllegalArgumentException if queue is not available
 	 * @throws IllegalStateException    if there's no alternative queue for moving
 	 *                                  elements to
