@@ -9,8 +9,9 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
-/* Q is the type of the unique identifier of queues 
- * that contains elements of type T. 
+/* 
+ * Q is the type of the unique identifier of queues 
+ * that contains elements of type T.
  */
 public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
 	private final Map<Q, Queue<T>> queues = new HashMap<>();
@@ -140,6 +141,7 @@ public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
 	}
 
 	private Queue<T> getFirstAvailableQueue() {
-		return queues.values().iterator().next();
+		// Creates a new iterator and gets the first item.
+		return this.queues.values().iterator().next();
 	}
 }
