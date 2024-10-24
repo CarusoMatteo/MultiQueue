@@ -8,56 +8,44 @@ public class MultiQueueImpl<T, Q> implements MultiQueue<T, Q> {
 
 	@Override
 	public Set<Q> availableQueues() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'availableQueues'");
+		return null;
 	}
 
 	@Override
 	public void openNewQueue(Q queue) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'openNewQueue'");
 	}
 
 	@Override
 	public boolean isQueueEmpty(Q queue) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'isQueueEmpty'");
+		return false;
 	}
 
 	@Override
 	public void enqueue(T elem, Q queue) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'enqueue'");
 	}
 
 	@Override
 	public T dequeue(Q queue) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'dequeue'");
+		return null;
 	}
 
 	@Override
 	public Map<Q, T> dequeueOneFromAllQueues() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'dequeueOneFromAllQueues'");
+		return null;
 	}
 
 	@Override
 	public Set<T> allEnqueuedElements() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'allEnqueuedElements'");
+		return null;
 	}
 
 	@Override
 	public List<T> dequeueAllFromQueue(Q queue) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'dequeueAllFromQueue'");
+		return null;
 	}
 
 	@Override
 	public void closeQueueAndReallocate(Q queue) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'closeQueueAndReallocate'");
 	}
 
 }
